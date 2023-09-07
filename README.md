@@ -5,7 +5,8 @@
 ## 🔍 Table of Contents
 - [💼 Introduction](#-introduction)
 - [⚡ Quick Access Power User Commands](#-quick-access-power-user-commands)
-- [� Commands](#-commands)
+- [🚀 Commands](#-commands)
+  - [🐳 Docker](#-docker)
   - [📦 Database](#-database)
   - [📁 Collection](#-collection)
   - [📄 Document](#-document)
@@ -23,16 +24,26 @@ This repo was designed to be a quick reference for the most common MongoDB CLI c
 show dbs # Show all databases
 use <database> # Switch to a database
 db # Show current database
+show collections # Show all collections in the database you're in
 db.<collection>.find() # Show all documents in a collection
 db.<collection>.find().sort().pretty() # Show all documents in a collection, sorted, and pretty printed
 ```
 
 # 🚀 Commands
+## 🐳 Docker
+```bash
+docker exec -it <container> mongo --port 27017 # Enter a docker container, then enter the mongo shell at port 27017
+
+# Example:
+docker exec -it mongodbcontainer mongo --port 27017
+```
+
 ## 📦 Database
 ```bash
 show dbs # Show all databases
 use <database> # Switch to a database
 db # Show current database
+show collections # Show all collections in the database you're in
 db.dropDatabase() # Delete current database
 ```
 
